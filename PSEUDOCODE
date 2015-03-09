@@ -1,0 +1,40 @@
+Step 1: Introduce to Game
+	syso "Welcome to RPS"
+#############################################################
+Step 2: Ask how many rounds?
+	Best of 3,5,7
+	new integer roundsChosen
+	set to 3,5, or 7
+	set as integer variable
+	create 2 variables, one for player wins and one for computer wins
+######################################################################
+Step 3: Ask Choice
+================================================
+	New Variable playerChoice(int)
+		1 = Rock
+		2 = Paper
+		3 = Scissors
+	Have player input set playerChoice
+================================================
+	New Variable computerChoice(int)
+		1 = Rock
+		2 = Paper
+		3 = Scissors
+	Compute computer Choice
+######################################################################
+Step 4: Compare
+	new method for comparing compare()
+	String result = "";
+	if playerChoice == 1 && computerChoice == 3 {
+		result "Player Wins This Round";
+		playerWins++;
+		...
+	else {result "DRAW"}
+	numofRounds++;
+	return result;
+#######################################################################
+Step 5: Repeat
+	Wrap the whole program in a while loop(while numofRounds < roundsChosen)
+#######################################################################
+Step 6: When done with loop, Return a Who won line such as "Player Won"
+	
