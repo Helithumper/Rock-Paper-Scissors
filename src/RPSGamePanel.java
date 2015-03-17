@@ -1,15 +1,16 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
-import javax.swing.JButton;
-import javax.swing.BoxLayout;
 
 
 public class RPSGamePanel extends JPanel{
@@ -44,7 +45,7 @@ public class RPSGamePanel extends JPanel{
 	//Methods
 	public void setBoxLayout() {
 		//Creates Label on Panel
-		setLayout(new BorderLayout());
+		setLayout(new GridLayout(2,2));
 		imgLabel = new JLabel("Rock Paper Scissors Lizard Spock Game",null,SwingConstants.CENTER);
 		
 		
@@ -56,10 +57,15 @@ public class RPSGamePanel extends JPanel{
 		labelPanel.add(imgLabel);
 		labelPanel.setBackground(Color.WHITE);
 		
-		add(labelPanel,BorderLayout.PAGE_START);
+		resultLabel = new JLabel("",null,SwingConstants.CENTER);
+		//Positions Label
+		JPanel resultPanel = new JPanel();
+		resultPanel.add(resultLabel);
+		resultPanel.setPreferredSize(new Dimension(400,30));
+		resultPanel.setBackground(Color.WHITE);
 		
 		JPanel imagePanel = new JPanel();
-		imagePanel.setLayout(new BoxLayout(imagePanel,BoxLayout.X_AXIS));
+		imagePanel.setLayout(new GridLayout(1,2));
 		
 		//Sets Images for Player and Computer
 		player1Image = new JLabel();
@@ -73,13 +79,18 @@ public class RPSGamePanel extends JPanel{
 		player2Image.setIcon(blankImage);
 		player2Image.setMinimumSize(new Dimension(200,200));
 		imagePanel.add(player2Image);
+		player2Image.setLocation(50, 100);
 		
-		add(imagePanel,BorderLayout.CENTER);
+		
+		resultPanel.add(imagePanel);
+		add(resultPanel);
 		
 		JPanel buttonPanel = new JPanel();
 		buttonPanel.setBackground(Color.WHITE);
+		
 		//buttonPanel.setLayout(new BoxLayout(buttonPanel,BoxLayout.Y_AXIS));
-		buttonPanel.setLayout(new BorderLayout());
+		buttonPanel.setLayout(new GridLayout(6,1));
+		buttonPanel.add(labelPanel);
 		//Buttons
 		JButton button;
 		button = new JButton("--Rock--");
@@ -144,14 +155,7 @@ public class RPSGamePanel extends JPanel{
 		
 		add(buttonPanel,BorderLayout.LINE_START);
 		
-		resultLabel = new JLabel("",null,SwingConstants.CENTER);
-		//Positions Label
-		JPanel resultPanel = new JPanel();
-		resultPanel.add(resultLabel);
-		resultPanel.setPreferredSize(new Dimension(400,30));
-		resultPanel.setBackground(Color.WHITE);
 		
-		add(resultPanel,BorderLayout.PAGE_END);
 	}//End of Method
 	
 	public void checkComputerMove() {
