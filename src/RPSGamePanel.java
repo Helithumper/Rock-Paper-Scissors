@@ -230,30 +230,5 @@ public class RPSGamePanel extends JPanel{
 		    resultLabel.setText(resultLabel.getText() + " Rounds Won: " + player1RoundsWon + " Rounds Lost: " + player2RoundsWon);
 		  }//end of round-winner method
 	
-	/*//Constructor
-	public RPSGamePanel(RPSGame game1) {
-		this.game1 = game1;
-		//Assign Instance Fields
-		rockIcon = new ImageIcon("rock.png");
-		paperIcon = new ImageIcon("paper.png");
-		scissorsIcon = new ImageIcon("scissors.png");
-		//Creates label for Title
-		imgLabel = new JLabel("PLAYER",rockIcon,SwingConstants.CENTER);
-		//sets location of title label
-		imgLabel.setHorizontalTextPosition(SwingConstants.LEFT);
-		imgLabel.setVerticalTextPosition(SwingConstants.TOP);
-		//Adds label to panel
-		add(imgLabel);
-		//Creates label for Title
-		imgLabel2 = new JLabel("COMPUTER",rockIcon,SwingConstants.CENTER);
-		//sets location of title label
-		imgLabel2.setHorizontalTextPosition(SwingConstants.RIGHT);
-		imgLabel2.setVerticalTextPosition(SwingConstants.TOP);
-		//Adds label to panel
-		add(imgLabel2);
-		//Sets background color
-		setBackground(Color.WHITE);
-		//Sets the size of the panel
-		setPreferredSize(new Dimension(400,200));*/
 	
 }

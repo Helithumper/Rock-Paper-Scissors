@@ -11,7 +11,6 @@ public class RPSGame {
 	//Constructor
 	public RPSGame(){
 		reader = new Scanner(System.in);
-		gameIntro();
 	}
 	//Assessors
 	public int getComputerWins() {return computerWins;}
@@ -21,17 +20,10 @@ public class RPSGame {
 	public String getPlayerMove() {return playerMove;}
 	public int getTies() {return ties;}
 	//Mutators
-	//public void setComputerWins(int computerWins) {this.computerWins = computerWins;}
-	//public void setPlayerWins(int playerWins) {this.playerWins = playerWins;}
-	//public void setPlayerWon(Boolean playerWon) {this.playerWon = playerWon;}
-	//public void setComputerMove(String computerMove) {this.computerMove = computerMove;}
-	//public void setPlayerMove(String playerMove) {this.playerMove = playerMove;}
 
 
 	//Methods
-	public String gameIntro() {
-		return "LETS PLAY ROCK<<<<PAPPPEEERRR<<<<<<SCCCCCCCCIIISSSSUUUHHHRRRSS!!!";
-	}
+	
 	
 	public void playGame() {
 		String winner = "";
@@ -53,15 +45,10 @@ public class RPSGame {
 		else if(playerMove.equals("ROCK") && computerMove.equals("SCISSORS")) {playerWins++; return "PLAYER WINS!";}
 		else if(playerMove.equals("PAPER") && computerMove.equals("ROCK")) {playerWins++; return "PLAYER WINS!";}
 		else{return "ERROR: No Results for inputs";}
-		//return result;
-		//return result;
+		
 	}
-	/*public void updateScore(){
-		if(playerWon){playerWins++;}
-		else{computerWins++;}
-	}*/
+	
 	public String gameEnd(){
 		return "Thanks for Playing!";
 	}
-	//toString()
 }

@@ -13,7 +13,6 @@ public class ComputerPlayer {
 		int compMoveInt = 0;
 		String compMove = null;
 		Random generator = new Random();
-		//compMoveInt = (int)(Math.random() *3) + 1;
 		compMoveInt = generator.nextInt(5) + 1;
 		if(compMoveInt == 1) {compMove = "Rock";}
 		else if (compMoveInt == 2) {compMove = "Paper";}

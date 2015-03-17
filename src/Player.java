@@ -10,7 +10,6 @@ public class Player {
 	//Methods
 	public String getPlayerMove() {
 		String playerMove = "";
-		//System.out.println("It's the player's move.");
 		while(!playerMove.equals("ROCK") && !playerMove.equals("PAPER") && !playerMove.equals("SCISSORS")){
 			System.out.println("Enter your move [Rock, Paper, or Scissors]: ");
 			playerMove = reader.next();
